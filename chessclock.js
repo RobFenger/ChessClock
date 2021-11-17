@@ -557,6 +557,7 @@ const timerOne = () => {
     if (hourOne === 0 && minuteOne === 0 && secondOne === 0) {
         player1.style.backgroundColor = 'red';
         stopwatch1.innerHTML = 'GAME OVER!';
+        navigator.vibrate(200);
     } else if (secondOne === 0 && minuteOne !== 0) {
         minuteOne = minuteOne - 1;
         secondOne = 59;
@@ -584,6 +585,7 @@ const timerTwo = () => {
     if (hour === 0 && minute === 0 && second === 0) {
         player2.style.backgroundColor = 'red';
         stopwatch2.innerHTML = `GAME OVER!`;
+        navigator.vibrate(200);
     } else if (second === 0 && minute !== 0) {
         minute = minute - 1;
         second = 59 ;
