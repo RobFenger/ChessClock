@@ -62,84 +62,85 @@ button {
 }
 
 @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-    .player1 {
-        width: 110%;
-        height: 850px;
-        margin-left: 50px;
-        display: flex;
-        justify-content: center; 
-        align-items: flex-end;
-    }
+    and (min-device-width: 320px)
+    and (max-device-width: 1024px) {
+        .player1 {
+            width: 110%;
+            height: 850px;
+            margin-left: 50px;
+            display: flex;
+            justify-content: center; 
+            align-items: flex-end;
+        }
 
-    #stopwatch1 {
-        transform: scale(-1, -1);
-        -moz-transform: scale(-1, -1);
-        -webkit-transform: scale(-1, -1);
-        -o-transform: scale(-1, -1);
-        -ms-transform: scale(-1, -1);
-    }
+        #stopwatch1 {
+            transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -webkit-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+        }
 
-    .player2 {
-        width: 110%;
-        height: 850px;
-        margin-left: 50px;
-    }
-
-    h1 {
-        font-size: 75px;
-    }
-
-    .settings {
-        visibility: hidden;
-        bottom: 2000px;
-        left: 0px;
-        font-size: 40px;
-        background-color: lightgray;
-        width: 100%;
-        padding-left: 100px;
-        padding-right: 100px;
-        padding-top: 300px;
-        padding-bottom: 500px;
-    }
-
-    #x {
-        display: block;
-        position: relative;
-        float: right;
-        font-size: 50px;
-    }
-
-    button {
-        font-size: 35px;
-        margin-bottom: 20px;
-    }
-
-    .controls {
-        height: 100px;
-        width: 100%;
-        margin-left: 100px;
-    }
+        .player2 {
+            width: 110%;
+            height: 850px;
+            margin-left: 50px;
+        }
     
-    .setting-icon {
-        width: 70px;
-        height: 70px;
-        margin-right: 20px;
-    }
+        h1 {
+            font-size: 75px;
+        }
     
-    .pause-icon {
-        width: 80px;
-        height: 80px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+        .settings {
+            visibility: hidden;
+            bottom: 2000px;
+            left: 0px;
+            font-size: 40px;
+            background-color: lightgray;
+            width: 100%;
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 300px;
+            padding-bottom: 500px;
+        }
     
-    .reset-icon {
-        width: 70px;
-        height: 70px;
-        margin-left: 20px;
+        #x {
+            display: block;
+            position: relative;
+            float: right;
+            font-size: 50px;
+        }
+    
+        button {
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+    
+        .controls {
+            height: 100px;
+            width: 100%;
+            margin-left: 100px;
+        }
+        
+        .setting-icon {
+            width: 70px;
+            height: 70px;
+            margin-right: 20px;
+        }
+        
+        .pause-icon {
+            width: 80px;
+            height: 80px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        
+        .reset-icon {
+            width: 70px;
+            height: 70px;
+            margin-left: 20px;
+        }
+
+
     }
-}
 
