@@ -1,0 +1,134 @@
+.player1 {
+    height: 250px;
+    width: 500px;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+.player2 {
+    height: 250px;
+    width: 500px;
+    background-color: lightgray;
+    border: 1px solid black;   
+}
+
+.controls {
+    height: 50px;
+    width: 500px;
+    text-align: center;
+}
+
+.icon {
+    color: black;
+    cursor: pointer;
+}
+
+.setting-icon {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+}
+
+.pause-icon {
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.reset-icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.settings {
+    visibility: hidden;
+    position: relative;
+    bottom: 550px;
+    left: 600px;
+}
+
+#x {
+    display: none;
+}
+
+button {
+    padding: 15px;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .player1 {
+        width: 110%;
+        height: 850px;
+        margin-left: 50px;
+    }
+
+    .player2 {
+        width: 110%;
+        height: 850px;
+        margin-left: 50px;
+    }
+
+    h1 {
+        font-size: 75px;
+    }
+
+    .settings {
+        visibility: hidden;
+        bottom: 2000px;
+        left: 0px;
+        font-size: 40px;
+        background-color: lightgray;
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 100px;
+        padding-top: 300px;
+        padding-bottom: 500px;
+    }
+
+    #x {
+        display: block;
+        position: relative;
+        float: right;
+        font-size: 50px;
+    }
+
+    button {
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    .controls {
+        height: 100px;
+        width: 100%;
+        margin-left: 100px;
+    }
+    
+    .setting-icon {
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+    }
+    
+    .pause-icon {
+        width: 80px;
+        height: 80px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .reset-icon {
+        width: 70px;
+        height: 70px;
+        margin-left: 20px;
+    }
+}
+
