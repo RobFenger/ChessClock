@@ -156,6 +156,10 @@ button {
             margin-left: 20px;
         }
 
-
+        input {
+            font-size: 35px;
+            height: 50px;
+            width: 500px;
+        }
     }
 
