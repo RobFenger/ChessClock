@@ -61,19 +61,34 @@ button {
     padding: 15px;
 }
 
+.input-label {
+    display: inline-block;
+}
+
+
+
+
 @media only screen 
-    and (min-device-width: 320px)
+    and (min-device-width: 280px)
     and (max-device-width: 1024px) {
         .player1 {
             width: 110%;
             height: 850px;
             margin-left: 50px;
             display: flex;
-            justify-content: center; 
-            align-items: flex-end;
+            align-items: center;
+            flex-direction: column-reverse;
         }
 
         #stopwatch1 {
+            transform: scale(-1, -1);
+            -moz-transform: scale(-1, -1);
+            -webkit-transform: scale(-1, -1);
+            -o-transform: scale(-1, -1);
+            -ms-transform: scale(-1, -1);
+        }
+
+        #player-one {
             transform: scale(-1, -1);
             -moz-transform: scale(-1, -1);
             -webkit-transform: scale(-1, -1);

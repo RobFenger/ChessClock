@@ -847,3 +847,20 @@ const x = document.getElementById("x");
 x.onclick = () => {
     settings.style.visibility = 'hidden';
 }
+
+const P1Name = document.getElementById("P1-name-input");
+const P2Name = document.getElementById("P2-name-input");
+
+const playerOne = document.getElementById("player-one");
+const playerTwo = document.getElementById("player-two");
+
+P1Name.addEventListener('input', handleEventP1);
+P2Name.addEventListener('input', handleEventP2);
+
+function handleEventP1 (e) {
+    playerOne.innerHTML = e.target.value;
+}
+
+function handleEventP2 (e) {
+    playerTwo.innerHTML = e.target.value;
+}
