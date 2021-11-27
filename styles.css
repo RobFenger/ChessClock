@@ -47,7 +47,7 @@ h1 {
 }
 
 .settings {
-    visibility: hidden;
+    display: none;
     position: relative;
     bottom: 550px;
     left: 600px;
@@ -107,7 +107,6 @@ button {
         }
     
         .settings {
-            visibility: hidden;
             bottom: 2000px;
             left: 0px;
             font-size: 40px;
