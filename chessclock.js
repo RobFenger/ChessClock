@@ -3,6 +3,8 @@ const player2 = document.getElementById("player2");
 const stopwatch1 = document.getElementById("stopwatch1");
 const stopwatch2 = document.getElementById("stopwatch2");
 
+//start values of the variables, the clock at 0, stopwatches for both players set to false
+//stopwatch is true when the time runs for that player
 let hourOne = 0;
 let minuteOne = 0;
 let secondOne = 0;
@@ -14,8 +16,10 @@ let stopwatch = false;
 let incrementP1;
 let incrementP2;
 
-
+//jquery
 $(document).ready(() => {
+    //open and close the settings-menu via the setting-icon
+    //close the settings-menu for mobile via x
     $('#setting-icon').on('click', () => {
         $('#settings').toggle();
     })
@@ -23,6 +27,7 @@ $(document).ready(() => {
         $('#settings').hide();
     })
 
+    //when the pause-button is clicked the time stops running for both players
     $('#pause').on('click', () => {
         clearInterval(player1On);
         clearInterval(player2On);
@@ -30,6 +35,7 @@ $(document).ready(() => {
         stopwatchOne = false;
     })
 
+    //when the reset-icon is clicked all settings go back to the start (both timers at 0 and backgroundplayer for both players back to not playing (grey instead of green or red))
     $('#reset-icon').on('click', () => {
         clearInterval(player1On);
         clearInterval(player2On);
@@ -53,6 +59,7 @@ $(document).ready(() => {
         $('.incrementTimePlayerTwo').children().css('backgroundColor', '');
     })
 
+    //function for the correct display of the time for both players
     const displayTime = () => {
         if (minuteOne < 10 && secondOne < 10) {
             stopwatch1.innerHTML = `0${hourOne}:0${minuteOne}:0${secondOne}`;
@@ -77,6 +84,9 @@ $(document).ready(() => {
         }
     }
 
+    //setting the time via the settings-menu
+    //if a time is selected the button becomes green and all the other time-buttons for the same player go back to default
+    //trigger displayTime to update the time at the display
     $('#thirtySecondsPlayerOne').on('click', event => {
         $(event.currentTarget).css("backgroundColor", 'lightgreen');
         $(event.currentTarget).siblings().css("backgroundColor", '');
@@ -191,6 +201,8 @@ $(document).ready(() => {
         displayTimeP2();
     })
 
+    //setting the increment-time via incrementP1 and incrementP2 in seconds
+    //with the possiblity in the else-statement to remove the increment-time
     $('#oneSecondP1').on('click', event => {
         if (incrementP1 !== 1) {
             $(event.currentTarget).css('backgroundColor', 'lightgreen');
@@ -314,6 +326,7 @@ $(document).ready(() => {
     })
 })
 
+//timerfunction to state game-over when no time left and make sure that time is correct displayed (to get the minute one down when seconds reaches 0)
 const timerOne = () => {
     stopwatchOne = true;
     if (hourOne === 0 && minuteOne === 0 && secondOne === 0) {
@@ -373,11 +386,15 @@ const timerTwo = () => {
 let player1On;
 let player2On;
 
+
+//function triggered when clicking on the player-field to give the turn to the other player (so the other players-timer start running)
+//and depending on the increment-setting increment the time
 player2.onclick = () => {
     if ((hour !== 0 || minute !== 0 || second !== 0) && (hourOne !== 0 || minuteOne !== 0 || secondOne !== 0)) {
     if (stopwatchOne === false) {
         player1.style.backgroundColor = 'lightgreen';
         player2.style.backgroundColor = 'lightgray';
+        //clearinterval for the player who clicked its field
         clearInterval(player2On);
         if (incrementP2 === 1 && stopwatch) {
             second = second + 1;
@@ -449,6 +466,7 @@ player2.onclick = () => {
         } else if (minute >= 10 && second >= 10) {
             stopwatch2.innerHTML = `0${hour}:${minute}:${second}`;
         }
+        //startinterval for the other player
         player1On = setInterval(timerOne, 1000);
         stopwatch = false;  
     } 
@@ -459,6 +477,7 @@ player1.onclick = () => {
     if (stopwatch === false) {
         player1.style.backgroundColor = 'lightgray';
         player2.style.backgroundColor = 'lightgreen';
+        //clearinterval for the player who clicked its field
         clearInterval(player1On);
         if (incrementP1 === 1 && stopwatchOne) {
             secondOne = secondOne + 1;
@@ -531,6 +550,7 @@ player1.onclick = () => {
         } else if (minuteOne >= 10 && secondOne >= 10) {
             stopwatch1.innerHTML = `0${hourOne}:${minuteOne}:${secondOne}`;
         }
+        //startinterval for the other player
         player2On = setInterval(timerTwo, 1000);
         stopwatchOne = false;
        
@@ -543,6 +563,8 @@ const P2Name = document.getElementById("P2-name-input");
 const playerOne = document.getElementById("player-one");
 const playerTwo = document.getElementById("player-two");
 
+
+//to type a name in the settings-menu and have the name displayed in its player-field
 P1Name.addEventListener('input', handleEventP1);
 P2Name.addEventListener('input', handleEventP2);
 
