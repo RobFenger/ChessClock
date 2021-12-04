@@ -72,9 +72,10 @@ button {
     and (min-device-width: 280px)
     and (max-device-width: 1024px) {
         .player1 {
-            width: 110%;
+            width: 90%;
             height: 850px;
-            margin-left: 50px;
+            margin-left: 5%;
+            margin-right: 5%;
             display: flex;
             align-items: center;
             flex-direction: column-reverse;
@@ -97,9 +98,10 @@ button {
         }
 
         .player2 {
-            width: 110%;
+            width: 90%;
             height: 850px;
-            margin-left: 50px;
+            margin-left: 5%;
+            margin-right: 5%;
         }
     
         h1 {
